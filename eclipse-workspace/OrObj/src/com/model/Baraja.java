@@ -1,6 +1,7 @@
 package com.model;
 
 import java.util.Arrays;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Baraja {
 	
@@ -22,6 +23,21 @@ public class Baraja {
 				System.out.println(c);
 			}
 		}
+	}
+	
+	public void barajar() {
+		
+		for (int i = 0; i <numCartas;i++) {
+			int numAleatorio = ThreadLocalRandom.current().nextInt(0,numCartas);
+			int[] numAnteriores = new int [48];
+			int[] posicionesOcupadas = new int[48];
+			for (int j = 0; j<numAnteriores.length;j++) {
+				if (numAleatorio!=numAnteriores[j]) {
+					int posicionAPoner = ThreadLocalRandom.current().nextInt(0,numCartas);
+				}
+			}
+		}
+		
 	}
 
 	public Carta[] getCartas() {
